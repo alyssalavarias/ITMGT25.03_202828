@@ -6,10 +6,13 @@ products = {
     "espresso":{"name":"Espresso","price":140.00},
     "frappuccino":{"name":"Frappuccino","price":170.00},
 }
+
 def get_product(code):
     return products[code]
+
 def get_property(code, property):
     return products[code][property]
+
 def main():
     
     session = ''
@@ -51,4 +54,5 @@ CODE\t\t\tNAME\t\t\tQUANTITY\t\t\tSUBTOTAL\n''')
     with open('receipt.txt','a+') as summary:       
         summary.write(f'''\nTotal:\t\t\t\t\t\t\t\t\t\t\t\t{total}
 ==''')
+
 main()
